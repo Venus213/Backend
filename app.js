@@ -11,6 +11,7 @@ var priceRouter = require('./routes/price');
 var beauticianRouter = require('./routes/beautician');
 var galleryRouter = require('./routes/gallery');
 var blogRouter = require('./routes/blog');
+
 var offerRouter = require('./routes/offer');
 var contactRouter = require('./routes/contact');
 var appoinmentRouter = require('./routes/appoinment');
