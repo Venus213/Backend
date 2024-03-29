@@ -82,6 +82,10 @@ router.post("/login", async function (req, res, next) {
     const data = await SIGNUP.findOne({ email: req.body.email });
     // console.log(data);
 
+    if(!data){
+      throw new Error("email is not valid")
+    }
+
     const check = await bcrypt.compare(req.body.password, data.password);
     if (!check) {
       throw new Error("Password is incorrect");
